@@ -19,7 +19,8 @@ export class HitCounter extends Construct {
         
         const table = new dynamodb.Table(this, 'Hits', {
             partitionKey: { name: 'path', type: dynamodb.AttributeType.STRING },
-            removalPolicy: RemovalPolicy.DESTROY
+            removalPolicy: RemovalPolicy.DESTROY,
+            encryption: dynamodb.TableEncryption.AWS_MANAGED
         });
         this.table = table;
 
