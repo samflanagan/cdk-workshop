@@ -1,5 +1,5 @@
 # This is an updated version of the cdkworkshop.com code
-This repo contains updated code for the CDK TypeScript workshop at https://cdkworkshop.com/20-typescript.html. The code has been updated for compatibility with CDK v2.130 and JavaScript SDK v3.
+This repo contains updated code for the CDK TypeScript workshop at https://cdkworkshop.com/20-typescript.html. The code has been updated for compatibility with CDK v2.130 and JavaScript SDK v3. The repo contains a Dev Container, configured for AWS CDK and SAM-CLI, etc. 
 
 # Welcome to your CDK TypeScript project
 
