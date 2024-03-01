@@ -1,5 +1,6 @@
 import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import {WorkshopPipelineStage} from './pipeline-stage';
 import {CodeBuildStep, CodePipeline, CodePipelineSource} from "aws-cdk-lib/pipelines";
 
 export class WorkshopPipelineStack extends Stack {
@@ -24,5 +25,9 @@ export class WorkshopPipelineStack extends Stack {
             }
         )
     });
+    
+    const deploy = new WorkshopPipelineStage(this, 'Deploy');
+    const deployStage = pipeline.addStage(deploy);
+    
     }
 }
