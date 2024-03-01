@@ -30,7 +30,7 @@ export class HitCounter extends Construct {
             partitionKey: { name: 'path', type: dynamodb.AttributeType.STRING },
             removalPolicy: RemovalPolicy.DESTROY,
             encryption: dynamodb.TableEncryption.AWS_MANAGED,
-            readCapacity: props.readCapacity ?? 5
+            readCapacity: props.readCapacity ?? 6
         });
         this.table = table;
 
